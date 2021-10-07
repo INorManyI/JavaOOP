@@ -7,19 +7,21 @@ public class Main {
 
 
     public static void main(String[] args) {
-        System.out.println("Я бот который тебе поможет, нужна помощь /Help");
-        boolean tt = true;
-        while(tt = true) {
+        System.out.println("Я бот показывающий последнюю информацию по CSGO");
+        System.out.println("я знаю команды: /Help, Stop, Последнее обновление");
+        while(true) {
             Scanner input = new Scanner(System.in);
-            String x = input.nextLine();
-            System.out.print(x); System.out.println(tt);
-            if(x.equals("Stop")) {
-                break;
-            }else if(x.equals("/Help")) {
+             String string = input.nextLine();
+            if(string.equals("Stop")) {break;}
+            else if(string.equals("/Help")) {
                 System.out.println("Вот твоя помощь");
-            }else if(x.equals("Последние обновление")) {
+            }else if(string.equals("Последнее обновление")) {
                 Date date1 = new Date();
-                System.out.println("последние обновление было " + date1.getHours());
+                System.out.println("Воть :  " + date1.getHours());
+            }else if(string.equals("")) {
+                System.out.println("Запрос не верен");
+            }else{
+                System.out.println("Ошибка: неизвестный запрос");
             }
         }
     }
