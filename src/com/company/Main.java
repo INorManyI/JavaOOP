@@ -17,7 +17,7 @@ public class Main {
                 System.out.println("Вот твоя помощь");
             }else if(string.equals("Последнее обновление")) {
                 Date date1 = new Date();
-                System.out.println("Воть :  " + date1.getHours());
+                System.out.println("Вот :  " + date1.getHours());
             }else if(string.equals("")) {
                 System.out.println("Запрос не верен");
             }else{
@@ -26,5 +26,8 @@ public class Main {
         }
     }
 
+    public static String getHelloMassage(String name) {
+        return name;
+    }
 }
 
