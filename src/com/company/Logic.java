@@ -1,10 +1,10 @@
 package com.company;
 
-public class AI
+public class Logic
 {
     Function function = new Function();
 
-    public String head (String message)
+    public Response head (String message)
     {
         if (message.equals("/Help"))
         {
@@ -16,8 +16,8 @@ public class AI
         }
         else if (message.equals(""))
         {
-            return "Запрос пуст";
+            return new Response("Запрос пуст");
         }
-        else return "Ошибка: неизвестный запрос";
+        else return new Response("Ошибка: неизвестный запрос");
     }
 }

@@ -1,23 +1,19 @@
 package com.company;
 
-import java.util.Scanner;
-
 public class Main
 {
     public static void main(String[] args)
     {
-        Scanner input = new Scanner(System.in);
-        Function function = new Function();
-        AI aI = new AI();
+        Console console = new Console();
+        Request request = new Request();
 
-        function.startMessage();
+        console.print("Я бот показывающий последнюю информацию по CSGO, чтобы узнать, что я умею напишите: /Help");
 
         while(true)
         {
-            String string = input.nextLine();
-            String answer = aI.head(string);
+            String message = console.writeLine();
 
-            System.out.println(answer);
+            console.print(request.answer(message));
         }
     }
 }

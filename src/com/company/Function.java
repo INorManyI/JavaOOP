@@ -4,19 +4,14 @@ import java.util.Date;
 
 public class Function
 {
-    public String startMessage()
+    public Response help()
     {
-        return "Я бот показывающий последнюю информацию по CSGO, чтобы узнать, что я умею напишите: /Help";
+        return new Response("/LastUpdate - узнать когда и какое было последнее обновление");
     }
 
-    public String help()
-    {
-        return "/LastUpdate - узнать когда и какое было последнее обновление";
-    }
-
-    public String lastUpdate()
+    public Response lastUpdate()
     {
         Date date1 = new Date();
-        return "Вот :  " + date1.getHours();
+        return new Response("Вот :  " + date1.getHours());
     }
 }
