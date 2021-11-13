@@ -6,7 +6,7 @@ import java.util.Date;
 
 class LogicTest
 {
-    /*Request request = new Request();
+    Request request = new Request();
 
     @Test
     void testHelpMassage()
@@ -31,5 +31,5 @@ class LogicTest
     void testOtherMassage()
     {
         assertEquals(request.answer("fdsaf"), "Ошибка: неизвестный запрос");
-    }*/
+    }
 }

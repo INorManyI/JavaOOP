@@ -1,2 +1,5 @@
-package com.company;public class URLReader {
+package com.company;
+
+public class URLReader
+{
 }
