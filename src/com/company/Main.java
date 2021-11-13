@@ -5,15 +5,14 @@ public class Main
     public static void main(String[] args)
     {
         Console console = new Console();
-        Request request = new Request();
+        Logic logic = new Logic();
 
-        console.print("Я бот показывающий последнюю информацию по CSGO, чтобы узнать, что я умею напишите: /Help");
+        console.print(new Response("Я бот показывающий последнюю информацию по CSGO, чтобы узнать, что я умею напишите: /Help"));
 
         while(true)
         {
-            String message = console.writeLine();
-
-            console.print(request.answer(message));
+            Request message = console.getRequest();
+            console.print(logic.heading(message));
         }
     }
 }

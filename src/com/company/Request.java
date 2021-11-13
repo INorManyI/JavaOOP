@@ -2,9 +2,15 @@ package com.company;
 
 public class Request
 {
-    public String answer(String message)
+    private final String message;
+
+    public Request(String message)
     {
-        Logic logic = new Logic();
-        return logic.head(message).getAnswer();
+        this.message = message;
+    }
+
+    public String getMessage()
+    {
+        return this.message;
     }
 }

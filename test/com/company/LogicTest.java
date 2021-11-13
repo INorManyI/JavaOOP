@@ -2,34 +2,32 @@ package com.company;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-import java.util.Date;
 
 class LogicTest
 {
-    Request request = new Request();
+    Logic logic = new Logic();
 
     @Test
     void testHelpMassage()
     {
-        assertEquals(request.answer("/Help"), "/LastUpdate - узнать когда и какое было последнее обновление");
+        assertEquals(logic.heading(new Request("/Help")).getAnswer(), "/LastUpdate - узнать когда и какое было последнее обновление");
     }
 
     @Test
     void testLastUpdateMassage()
     {
-        Date date1 = new Date();
-        assertEquals(request.answer("/LastUpdate"), "Вот :  " + date1.getHours());
+        assertEquals(logic.heading(new Request("/LastUpdate")).getAnswer(), "Вот :  ");
     }
 
     @Test
     void testEmptinessMassage()
     {
-        assertEquals(request.answer(""), "Запрос пуст");
+        assertEquals(logic.heading(new Request("")).getAnswer(), "Запрос пуст");
     }
 
     @Test
     void testOtherMassage()
     {
-        assertEquals(request.answer("fdsaf"), "Ошибка: неизвестный запрос");
+        assertEquals(logic.heading(new Request("fdsaf")).getAnswer(), "Ошибка: неизвестный запрос");
     }
 }
