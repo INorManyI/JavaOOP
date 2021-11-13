@@ -12,6 +12,6 @@ public class Function
     public Response lastUpdate()
     {
         Date date1 = new Date();
-        return new Response("Вот :  " + date1.getHours());
+        return new Response("Вот :  ");
     }
 }
